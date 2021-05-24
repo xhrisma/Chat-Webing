@@ -19,6 +19,8 @@ app.set('view engine','pug');
 
 require('./app/sockets')(io);
 
-server.listen(3000, function(){
-    console.log('Servidor corriendo en el puerto 3000');
+const port = process.env.PORT || 3000
+
+server.listen(port, function(){
+    console.log('Servidor corriendo en el puerto '+port);
 });
