@@ -104,6 +104,8 @@
     font-size: smaller;
     overflow-y: auto;
     margin-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
 }
 .online-icon{
     color: rgb(15, 250, 7);
