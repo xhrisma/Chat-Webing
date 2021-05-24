@@ -1,38 +1,55 @@
 /*Registo Form*/
 #welcome{
     align-items: center;
-    background-image: url('/images/background.jpg');
+  background-color :#111111;
     background-size: cover;
+    
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    color: #fff;
+    font-style: inherit;
 }
+#marca{
+    display: flex;
+    flex-direction: row;
+   /* margin-bottom: 1px;*/
+    
+}
+
+
 #registro-form{
-    background: rgba(0,0,0,.25);
-    padding: 30px;
+    background:transparent;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
     width: 350px;
 }
 #username{
     background: transparent;
-    border: 1px solid #000;
+    border: 1px solid rgb(88, 83, 83);
     border-radius: 20px;
     font-size: 14px;
     margin: 20px 0px;
+    color: white;
     padding: 10px;
 }
 #username::placeholder{
-    color: #000;
+    color:rgb(204, 193, 193);
 }
 #send-form{
-    background: rgb(33, 95, 228);
+    background: rgb(33, 199, 228);
     border-radius: 20px;
-    color: #fff;
+    color: #000;
     display: block;
     padding: 10px 50px;
     margin: auto;
+    
 }
 #send-form:hover{
-    background: rgb(71, 124, 238);
+    background: rgb(31, 30, 30);
     cursor: pointer;
+    color: white;
 }
 #registro-form > div{
     display: flex;

@@ -1,4 +1,5 @@
 var users = require('./users');
+//let messageArea = document.querySelector('##msg-list')
 
 module.exports = function(io){
     io.on('connection',function(socket){
@@ -8,6 +9,9 @@ module.exports = function(io){
         newMessage(socket);
     });
 }
+/*socket.on('chat:escribiendo',(data)=>{
+    socket.broadcast.emit('chat:escribiendo',data);
+})*/
 
 function addUser(socket){
     socket.on('username',function(data){
@@ -31,9 +35,16 @@ function disconnectUser(socket){
     });
 }
 
+
 function newMessage(socket){
     socket.on('newMessage',function(data){
         socket.emit('updateMessages',data);
         socket.broadcast.emit('updateMessages',data);
+    //     scrollToBottom()
     });
+
 }
+
+/*function scrollToBottom(){
+    messageArea.scrollTop=messageArea.scrollHeight
+}*/
