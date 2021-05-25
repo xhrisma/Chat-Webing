@@ -41,7 +41,7 @@
     padding: 20px;
 
 }
-.message::-webkit-scrollbar-thumb{
+.messages::-webkit-scrollbar-thumb{
     background: #158dad;
 }
 /*
