@@ -45,6 +45,10 @@ button{
 .titilando{
     animation: titilar 1.5s infinite;
 }
+.desliz::-webkit-scrollbar{
+    width: 7px;
+    background: #15ad29;
+}
 
 /*Animations*/
 @keyframes titilar{
