@@ -50,7 +50,7 @@ function newMessage(socket){
         document.querySelector('#send-msg-form').reset();
         
     });
-    scrollToBottom();
+   
     
 }
 
@@ -69,6 +69,7 @@ function updateMessages(socket){
             html += '</div></div>';
         }
         $('#msg-list').append(html);
+        scrollToBottom();
     });
     
 }
