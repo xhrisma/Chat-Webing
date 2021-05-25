@@ -52,6 +52,9 @@ button{
     background: #158dad;
     border-radius: 5px;
 }
+.desliz::-webkit-scrollbar-thumb:hover{
+    background:  #4f5d73c7;
+}
 
 /*Animations*/
 @keyframes titilar{
