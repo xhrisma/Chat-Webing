@@ -47,7 +47,10 @@ button{
 }
 .desliz::-webkit-scrollbar{
     width: 7px;
-    background: #15ad29;
+}
+.desliz::-webkit-scrollbar-thumb{
+    background: #158dad;
+    border-radius: 5px;
 }
 
 /*Animations*/
