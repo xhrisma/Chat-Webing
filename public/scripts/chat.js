@@ -33,8 +33,8 @@ function updateUsers(socket){
 
 
 function newMessage(socket){
-    const mensaje="";
-    if(mensaje){
+    const message=$('#message').val();
+    if(message){
 
     $('#message').keydown(function(ev){
         if(ev.keyCode ==13){
