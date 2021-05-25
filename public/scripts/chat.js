@@ -1,5 +1,5 @@
 
-
+let msgArea = document.querySelector('#messages')
 
 $(document).ready(function(){
     var socket = io();
@@ -46,6 +46,7 @@ function newMessage(socket){
           //  genero: localStorage.genero,
             message: $('#message').val()
         });
+        scrollToBottom();
         document.querySelector('#send-msg-form').reset();
     });
     
@@ -68,4 +69,7 @@ function updateMessages(socket){
         $('#msg-list').append(html);
     });
     
+}
+function scrollToBottom(){
+    messageArea.scrollTop=messageArea.scrollHeight
 }

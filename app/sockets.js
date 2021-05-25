@@ -1,5 +1,5 @@
 var users = require('./users');
-//let messageArea = document.querySelector('##msg-list')
+
 
 module.exports = function(io){
     io.on('connection',function(socket){
