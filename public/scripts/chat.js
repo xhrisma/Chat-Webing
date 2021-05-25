@@ -46,8 +46,9 @@ function newMessage(socket){
           //  genero: localStorage.genero,
             message: $('#message').val()
         });
-        scrollToBottom();
+        
         document.querySelector('#send-msg-form').reset();
+        scrollToBottom();
     });
     
 }
@@ -71,5 +72,5 @@ function updateMessages(socket){
     
 }
 function scrollToBottom(){
-    messageArea.scrollTop=messageArea.scrollHeight
+    msgArea.scrollTop=msgArea.scrollHeight
 }
