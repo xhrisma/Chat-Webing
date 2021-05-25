@@ -41,7 +41,7 @@
     padding: 20px;
 
 }
-.messages::-webkit-scrollbar-thumb{
+.desliz::-webkit-scrollbar-thumb{
     background: #158dad;
 }
 /*
