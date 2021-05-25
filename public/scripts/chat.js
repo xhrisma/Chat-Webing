@@ -46,12 +46,13 @@ function newMessage(socket){
     });
     $('#send-msg-form').submit(function(ev){
         ev.preventDefault();
+        if($('#message').val()){
         socket.emit('newMessage',{
             username: localStorage.username,
           //  genero: localStorage.genero,
             message: $('#message').val()
         });
-        
+        }
         document.querySelector('#send-msg-form').reset();
         
     });
