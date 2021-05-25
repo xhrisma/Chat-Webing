@@ -41,6 +41,9 @@
     padding: 20px;
 
 }
+.message::-webkit-scrollbar-thumb{
+    background: #158dad;
+}
 /*
 #actions p{
 
