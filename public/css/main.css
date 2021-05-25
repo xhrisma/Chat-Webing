@@ -46,7 +46,7 @@ button{
     animation: titilar 1.5s infinite;
 }
 .desliz::-webkit-scrollbar{
-    width: 7px;
+    width: 5px;
 }
 .desliz::-webkit-scrollbar-thumb{
     background: #37b8db;

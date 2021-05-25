@@ -33,8 +33,11 @@ function updateUsers(socket){
 
 
 function newMessage(socket){
+    const mensaje="";
+    if(mensaje){
+
     $('#message').keydown(function(ev){
-        if(ev.keyCode == 13){
+        if(ev.keyCode ==13){
             ev.preventDefault();
             $('#send-msg-form').submit();
         }
@@ -50,6 +53,7 @@ function newMessage(socket){
         document.querySelector('#send-msg-form').reset();
         
     });
+}
    
     
 }
