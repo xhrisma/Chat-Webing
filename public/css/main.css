@@ -49,7 +49,7 @@ button{
     width: 7px;
 }
 .desliz::-webkit-scrollbar-thumb{
-    background: #158dad;
+    background: #37b8db;
     border-radius: 5px;
 }
 .desliz::-webkit-scrollbar-thumb:hover{
