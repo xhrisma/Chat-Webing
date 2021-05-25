@@ -48,8 +48,9 @@ function newMessage(socket){
         });
         
         document.querySelector('#send-msg-form').reset();
-        scrollToBottom();
+        
     });
+    scrollToBottom();
     
 }
 
