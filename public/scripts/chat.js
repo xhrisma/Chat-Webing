@@ -34,12 +34,14 @@ function updateUsers(socket){
 
 function newMessage(socket){
    
-    if(!$('#message').val()){
+    
         
     $('#message').keydown(function(ev){
         if(ev.keyCode ==13){
             ev.preventDefault();
+            if($('#message').val()){
             $('#send-msg-form').submit();
+            }
         }
     });
     $('#send-msg-form').submit(function(ev){
@@ -53,7 +55,7 @@ function newMessage(socket){
         document.querySelector('#send-msg-form').reset();
         
     });
-}
+
    
     
 }
