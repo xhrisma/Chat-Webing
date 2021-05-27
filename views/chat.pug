@@ -4,30 +4,32 @@ html(lang="es")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title chat Webing
+        title Chat Webing
         link(rel="shortcut icon", href="assets/logo.png")
         link(rel="stylesheet", href="/css/main.css")
         link(rel="stylesheet", href="/css/chat.css")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
         script(src="/socket.io/socket.io.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    
        
     body
        
         #containertodo.full-height.full-width    
             #users-list
                         .full-width.full-height
-                            #marcachat.full-width  
                             img(class="imge" src="assets/logo.png", alt="")
-                         
-                            h2 Conectados
+                            #marcachat.full-width  
+                                h2 Conectados
                             #users
             #container.full-height.full-width
                 #chat-area.full-width
                     #messages.full-height.desliz
                         #msg-list.full-width
+                       
                 form#send-msg-form.full-width
                     textarea#message.lighter(name="message",placeholder="Escribe un mensaje...")
                     button#send-msg-btn
                         i.fa.fa-paper-plane
+                        
         script(src="/scripts/chat.js")

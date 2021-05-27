@@ -5,6 +5,17 @@
     flex-direction: column;
     
 }
+.tipoletra{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    color: greenyellow;
+}
+.coloricon{
+    color: hotpink;
+    width: 50px;
+    height: 50px;
+}
 #marcachat{
     display: flex;
     
@@ -12,8 +23,10 @@
    /* margin-bottom: 1px;*/
    background-color:rgb(31, 29, 29);
    margin-top: 1px;
-  
+  display: flex;
+  flex-direction: row;
 }
+
 #containertodo{
     display: flex;
    
@@ -41,6 +54,73 @@
     padding: 20px;
 
 }
+.online{
+    position: relative;
+    background: #81d0e6;
+    display: inline-flex;
+    padding: 10px 20px 10px 10px;
+    border-radius: 10px;
+    color: #111111;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+    text-align: left;
+}
+    
+.online i{
+   background: #81d0e6;
+   color: #4f5d73c7;
+   font-size: 25px;
+
+   width: 40px;
+   height: 40px;
+   text-align: center;
+   line-height: 35px;
+   border-radius: 50%;
+   border:3px solid #fff;
+   -webkit-box-shadow:inset 0 0 15px 0 rgba(0,0,0,0.4);
+   box-shadow:inset 0 0 15px 0 rgba(0,0,0,0.4);
+   text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+   position: absolute;
+   right: -30px;
+   top: 7.5px;
+   transform:rotate(0deg);
+   
+   
+   }
+.onlinerpta{
+    position: relative;
+    background: #4f5d73c7;
+    display: inline-flex;
+    padding: 10px 10px 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+    text-align: left;
+}
+    
+.onlinerpta i{
+   background: #4f5d73c7;
+   color: #81d0e6;
+   font-size: 25px;
+  
+   width: 40px;
+   height: 40px;
+   text-align: center;
+   line-height: 35px;
+   border-radius: 50%;
+   border:3px solid #fff;
+   -webkit-box-shadow:inset 0 0 15px 0 rgba(0,0,0,0.4);
+   box-shadow:inset 0 0 15px 0 rgba(0,0,0,0.4);
+   text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+   position: absolute;
+   left: -30px;
+   top: 7.5px;
+   transform:rotate(0deg);
+   justify-content: flex-end;
+   
+   }
+
 
 /*
 #actions p{
@@ -79,6 +159,7 @@
     resize: none;
     background: #111111;
     color: white;
+    flex-direction: row;
 
 }
 #send-msg-btn{
@@ -102,26 +183,52 @@
     margin: 10px 0px;
     color: white;
     
-    font-size: smaller;
+    font-size: small;
     overflow-y: auto;
     margin-left: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
     font-style: normal;
 }
 .online-icon{
-    color: rgb(15, 250, 7);
-    margin-right: 10px;
+    color:  #3FFFD7;;
+    margin-right: 10px;    
     
 }
 /*Mensajes*/
 .my-msg{
     justify-content: flex-end;
+   
+  
 }
 .my-style-m{
     border-radius: 10px 10px 0 10px ;
     background: #158dad;
    /* border: 1px solid rgb(79, 79, 187);*/
     color: #fff;
+   
+    
+}
+.avatarinsmsg{
+   
+    background-image: url('/assets/avatar1.png');
+    align-items: flex-end;
+    display: flex;
+   
+}
+.tamavatar{
+    background-image: url('assets/avatar1.png');
+	height : 50px; 
+	width : 50px; 
+	border-radius : 50%; 
+    
+    display: flex;
+  
+    
+    flex-direction: row;
+    justify-content: flex-end;
+	
+	/*margin-right: 5px;*/
+    
 }
 /*
 .my-style-f{
@@ -140,12 +247,18 @@
     border: 1px solid rgb(255, 60, 93);
 }
 .message{
-    
+    padding: 0px 20px 0px 0px;
     margin-bottom: 10px;
-    overflow-x: auto;
-    padding: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: oblique;
+    font-style: normal;
+    font-size: smaller;
+    
+}
+.messagerpta{
+    padding: 0px 0px 0px 20px;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
     font-size: smaller;
     
 }

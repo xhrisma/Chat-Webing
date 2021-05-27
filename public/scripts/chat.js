@@ -1,5 +1,6 @@
 
 let msgArea = document.querySelector('#messages')
+let img0 =document.querySelector('#av0')
 
 $(document).ready(function(){
     var socket = io();
@@ -22,7 +23,7 @@ function updateUsers(socket){
         for(var i = 0; i < data.users.length; i++){
             html = '';
             html += '<div class="user">';
-            html += '<i class="fa fa-circle online-icon"></i>';
+            html += '<i class="fa fa-circle  online-icon"></i>';
             html += data.users[i];
             html += '</div';
             $('#users').append(html);
@@ -64,16 +65,21 @@ function newMessage(socket){
 function updateMessages(socket){
     socket.on('updateMessages',function(data){
         let html = '';
+       
         if(data.username == localStorage.username){
-            html += '<div class="my-msg full-width flex">';
-            html += '<div class="my-style-m message"><h4> Tú </h4>';
-            html += '<p class="lighter">' + data.message + '</p>';
-            html += '</div></div>';
+           
+            html += '<div class="my-msg full-width flex " >';
+            html += '<div class="message"><h4> Tú </h4>';
+            html += '<p class="online "> <i class="fa fa-user-circle"></i>' + data.message + '</p>';
+            html += '</div>';
+            html +=  '</div>';
+     
         }else{
-            html += '<div class="full-width flex">';
-            html += '<div class="blue message"><h4>' + data.username + '</h4>';
-            html += '<p class="lighter">' + data.message + '</p>';
-            html += '</div></div>';
+            html += '<div class="full-width flex" >';
+            html += '<div class="messagerpta"><h4>'+ data.username + '</h4>';
+            html += '<p class="onlinerpta "> <i class="fa fa-user-circle"></i>' + data.message + '</p>';
+            html += '</div>';
+            html +=  '</div>';
         }
         $('#msg-list').append(html);
         scrollToBottom();
