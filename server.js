@@ -17,14 +17,6 @@ app.use('',Router);
 
 app.set('view engine','pug');
 
-
-/*
-io.sockets.on('connection',function(socket){
-    socket.on('userimage',function(image){
-        io.sockets.emit('updateImage','Imagen Compartida:', image);
-    });
-})
-*/
 require('./app/sockets')(io);
 
 const port = process.env.PORT || 4000

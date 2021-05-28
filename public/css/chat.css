@@ -18,13 +18,11 @@
 }
 #marcachat{
     display: flex;
-    
     flex-direction: row;
-   /* margin-bottom: 1px;*/
-   background-color:rgb(31, 29, 29);
-   margin-top: 1px;
-  display: flex;
-  flex-direction: row;
+    background-color:rgb(31, 29, 29);
+    margin-top: 1px;
+    display: flex;
+    flex-direction: row;
 }
 
 #containertodo{
@@ -127,27 +125,14 @@
    }
 
 
-/*
-#actions p{
 
-    padding: 14px 0;
-    margin:  0 20px;
-    border-bottom: 1px solid #e9e9e9;
-    color: #158dad;
-}*/
 #users-list{
-    /*background: rgb(49, 48, 48);*/
     background-color:rgb(31, 29, 29);
-    /*border: 1px solid #999;*/
     padding: 50px;
     display: flex;
     flex-direction: column;
-   /* 
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 5px;*/
 }
-/*FORMULARIO DE ENVIO MENSAJE*/
+
 #send-msg-form{
     display: flex;
     height: 20%;
@@ -185,10 +170,7 @@
     background: rgb(75, 75, 75);
     
 }
-#contfile{
-background-image: url('/assets/batman.ico');
-}
-#input
+
 
 .decoimg{
     background: #37b8db;
@@ -198,7 +180,7 @@ background-image: url('/assets/batman.ico');
     margin-left: 2px;
     
 }
-/*Usuarios en Linea*/
+
 .user{
     margin: 10px 0px;
     color: white;
@@ -214,7 +196,7 @@ background-image: url('/assets/batman.ico');
     margin-right: 10px;    
     
 }
-/*Mensajes*/
+
 .my-msg{
     justify-content: flex-end;
    
@@ -223,39 +205,14 @@ background-image: url('/assets/batman.ico');
 .my-style-m{
     border-radius: 10px 10px 0 10px ;
     background: #158dad;
-   /* border: 1px solid rgb(79, 79, 187);*/
+ 
     color: #fff;
    
     
 }
-.avatarinsmsg{
-   
-    background-image: url('/assets/avatar1.png');
-    align-items: flex-end;
-    display: flex;
-   
-}
-.tamavatar{
-    background-image: url('assets/avatar1.png');
-	height : 50px; 
-	width : 50px; 
-	border-radius : 50%; 
-    
-    display: flex;
-  
-    
-    flex-direction: row;
-    justify-content: flex-end;
-	
-	/*margin-right: 5px;*/
-    
-}
-/*
-.my-style-f{
-    background: rgb(233, 191, 224);
-    border: 1px solid rgb(187, 79, 182);
-    color: rgb(0, 0, 0);
-}*/
+
+
+
 .blue{
     background: #4f5d73c7;
   

@@ -1,6 +1,6 @@
 
 let msgArea = document.querySelector('#messages')
-let img0 =document.querySelector('#av0')
+
 
 $(document).ready(function(){
     var socket = io();
@@ -50,7 +50,6 @@ function newMessage(socket){
         if($('#message').val()){
         socket.emit('newMessage',{
             username: localStorage.username,
-          //  genero: localStorage.genero,
             message: $('#message').val()
         });
         }
@@ -94,7 +93,6 @@ function newImage(socket){
         reader.onload = function(evt){
             socket.emit('newImage',evt.target.result,{
                 username: localStorage.username,
-          //  genero: localStorage.genero,
               imagefile: $('#imagefile').val()
             });
         };
@@ -125,22 +123,7 @@ function updateImage(socket){
             $('#msg-list').append(html);
             scrollToBottom();
         });
-        
-/*  
-        $('#msg-list').append(
-            $('<p>').append($('<b>').text(msg),'<a target="_blank" href="' + base64image + '"><img src="' + base64image + '"/></a>'
-            )
-        )
-
-    })*/
-
 }
-
-
-
-  
-
-
 function scrollToBottom(){
     msgArea.scrollTop=msgArea.scrollHeight
 }

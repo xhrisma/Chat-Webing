@@ -1,9 +1,8 @@
-/*Registo Form*/
+
 #welcome{
     align-items: center;
   background-color :#111111;
     background-size: cover;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,8 +12,6 @@
 #marca{
     display: flex;
     flex-direction: row;
-   /* margin-bottom: 1px;*/
-    
 }
 
 
