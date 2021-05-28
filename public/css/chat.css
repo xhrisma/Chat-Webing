@@ -98,6 +98,11 @@
     margin-bottom: 5px;
     text-align: left;
 }
+.imgcomp{
+    height: 400px;
+    width: 400px;
+    
+}
     
 .onlinerpta i{
    background: #4f5d73c7;
@@ -162,6 +167,7 @@
     flex-direction: row;
 
 }
+
 #send-msg-btn{
     background: #37b8db;
     border-radius: 0px 10px 10px 0px;
@@ -173,9 +179,23 @@
     color: #111111;
     font-size: 20px;
 }
+
 #send-msg-btn:hover{
     cursor: pointer;
     background: rgb(75, 75, 75);
+    
+}
+#contfile{
+background-image: url('/assets/batman.ico');
+}
+#input
+
+.decoimg{
+    background: #37b8db;
+    border-radius: 0px 10px 10px 0px;
+    width: 75px;
+    height: 75px;
+    margin-left: 2px;
     
 }
 /*Usuarios en Linea*/

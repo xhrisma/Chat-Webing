@@ -8,6 +8,9 @@ $(document).ready(function(){
     updateUsers(socket);
     newMessage(socket);
     updateMessages(socket);
+    newImage(socket);
+    updateImage(socket);
+   
 });
 
 function username(socket){
@@ -34,9 +37,6 @@ function updateUsers(socket){
 
 
 function newMessage(socket){
-   
-    
-        
     $('#message').keydown(function(ev){
         if(ev.keyCode ==13){
             ev.preventDefault();
@@ -82,10 +82,65 @@ function updateMessages(socket){
             html +=  '</div>';
         }
         $('#msg-list').append(html);
-        scrollToBottom();
+
+    scrollToBottom();
     });
-    
+
 }
+function newImage(socket){
+    $('#imagefile').on('change',function(e){
+        var file = e.originalEvent.target.files[0];
+        var reader = new FileReader();
+        reader.onload = function(evt){
+            socket.emit('newImage',evt.target.result,{
+                username: localStorage.username,
+          //  genero: localStorage.genero,
+              imagefile: $('#imagefile').val()
+            });
+        };
+        reader.readAsDataURL(file);
+        document.querySelector('#imagefile').reset();
+    })
+}
+function updateImage(socket){
+            socket.on('updateImage',function(base64image,data){
+                let html = '';
+                if(data.username == localStorage.username){
+           
+                    html += '<div class="my-msg full-width flex " >';
+                    html += '<div class="message"><h4> Tú </h4>';
+                    html += '<p class="online imgcomp "><i class="fa fa-user-circle"></i><img src="' + base64image + '"/> </p> ';
+                    html += '</div>';
+                    html +=  '</div>';
+
+                }else{
+                    html += '<div class="full-width flex " >';
+                    html += '<div class="messagerpta"><h4>'+ data.username + '</h4>';
+                    html += '<p class="onlinerpta imgcomp "><i class="fa fa-user-circle"></i><img src="' + base64image + '"/> </p> ';
+                    html += '</div>';
+                    html +=  '</div>';
+
+                }   
+               
+            $('#msg-list').append(html);
+            scrollToBottom();
+        });
+        
+/*  
+        $('#msg-list').append(
+            $('<p>').append($('<b>').text(msg),'<a target="_blank" href="' + base64image + '"><img src="' + base64image + '"/></a>'
+            )
+        )
+
+    })*/
+
+}
+
+
+
+  
+
+
 function scrollToBottom(){
     msgArea.scrollTop=msgArea.scrollHeight
 }

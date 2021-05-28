@@ -9,10 +9,11 @@ html(lang="es")
         link(rel="stylesheet", href="/css/main.css")
         link(rel="stylesheet", href="/css/chat.css")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        script(src="https://code.jquery.com/jquery-1.11.2.min.js")
         script(src="/socket.io/socket.io.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
-    
        
+        
     body
        
         #containertodo.full-height.full-width    
@@ -26,7 +27,7 @@ html(lang="es")
                 #chat-area.full-width
                     #messages.full-height.desliz
                         #msg-list.full-width
-                       
+                input#imagefile(type="file" name="imagefile")
                 form#send-msg-form.full-width
                     textarea#message.lighter(name="message",placeholder="Escribe un mensaje...")
                     button#send-msg-btn
