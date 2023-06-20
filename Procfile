@@ -1,2 +1,1 @@
-web: node server.js
-gunicorn -b :5000 --access-logfile - --error-logfile - build:app
+web: gunicorn <nameOfRootFile>:appweb: gunicorn app:appweb: gunicorn -w 4 "app:create_app()" -t 120
