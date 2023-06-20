@@ -1,2 +1,3 @@
-web: gunicorn weather.wsgi --log-file -
+web: node server.js
+web: gunicorn wsgi:app
 
